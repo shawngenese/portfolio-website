@@ -1,0 +1,130 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+
+  height: 90px;
+  padding: 15px 20px;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.nav-menu {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--bg-color);
+  font-weight: 500;
+
+  opacity: 0;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+.nav-menu a {
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+  color: var(--text-color);
+}
+.nav-menu a:hover {
+  background-color: var(--bg-secondary);
+  color: var(--primary-color);
+}
+.nav-menu.menu-active {
+  opacity: 1;
+  pointer-events: auto;
+transform: translateX(0); /* slide in */
+  height: 100vh;
+  /* animation: slideFromLeft;
+  animation-timing-function: ease;
+  animation-duration: 0.3s; */
+}
+
+.nav-buttons button {
+  font-weight: 500;
+  font-size: 1.175rem;
+}
+#toggleMenu {
+  font-weight: 600;
+  display: none;
+}
+
+ /* @keyframes slideFromLeft {
+  from {
+    width: 0;
+    transform: translateX(-10%);
+  }
+  to {
+    width: 100%;
+    transform: translateX(0);
+  }
+}  */
+
+@media (min-width: 1044px) {
+  .navbar {
+    justify-content: space-around;
+  }
+  .nav-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    
+    flex-direction: row;
+    background-color: transparent;
+    /* transition: none; */
+  }
+  .nav-menu a:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+  }
+  .nav-menu a::after {
+    margin: 0;
+    padding: 0;
+    content: "";
+    display: block;
+    height: 0.15rem;
+    width: 100%;
+    background: var(--primary-color);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+  .nav-menu a:hover::after {
+    transform: scale(1);
+  }
+}
+@media (max-width: 1044px) {
+  .nav-menu {
+    opacity: none;
+    pointer-events: none;
+      height: 100vh;
+    /* transition: none; */
+      transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+@media (max-width: 375px) {
+  .btnTalk {
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  #toggleMenu {
+    font-size: 1.25rem;
+    height: 45px;
+  }
+}
+@media (min-width: 320px) {
+
+}
