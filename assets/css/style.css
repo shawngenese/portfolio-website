@@ -1,4 +1,5 @@
-@import url(/assets/css/navbar.css);
+@import url("/assets/css/navbar.css");
+
 :root {
   /* Backgrounds */
   --bg-color: #f8fafc;
@@ -28,9 +29,7 @@
   --main-font: IBM Plex Sans;
 }
 
-/* =========================
-   DARK MODE
-========================= */
+   /* DARK MODE */
 body.dark-mode {
   --bg-color: #0a0f1f;
   --bg-secondary: #0f172a;
@@ -50,10 +49,6 @@ body.dark-mode {
 
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
-
-/* =========================
-   GLOBAL
-========================= */
 
 * {
   margin: 0;
