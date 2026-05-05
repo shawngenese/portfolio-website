@@ -126,5 +126,7 @@ transform: translateX(0); /* slide in */
   }
 }
 @media (min-width: 320px) {
-
+  .navbar-logo, .nav-menu a .navbar-buttons{
+    font-size: 1rem;
+  }
 }

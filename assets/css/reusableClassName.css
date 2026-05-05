@@ -7,6 +7,9 @@
   align-items: center;
   justify-content: center;
 }
+.text-normal {
+  color: var(--text-color);
+}
 .text-muted {
   color: var(--text-muted);
 }
@@ -23,4 +26,7 @@
   background: var(--primary-gradient);
   background-clip: text;
   color: transparent;
+}
+.block {
+  display: block;
 }

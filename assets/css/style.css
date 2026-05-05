@@ -21,6 +21,7 @@
   /* Surfaces */
   --card-bg: #ffffff;
   --border-color: #e2e8f0;
+  --light-card-bg: #e0e7ff;
 
   /* Effects */
   --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -29,7 +30,7 @@
   --main-font: IBM Plex Sans;
 }
 
-   /* DARK MODE */
+/* DARK MODE */
 body.dark-mode {
   --bg-color: #0a0f1f;
   --bg-secondary: #0f172a;
@@ -63,8 +64,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 img {
-	display: block;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
 }
 
 body {
@@ -105,6 +111,7 @@ button:hover {
 .button-secondary:hover {
   background: var(--border-color);
 }
+
 /* temporary lang para sa card */
 .card {
   background: var(--card-bg);
@@ -122,77 +129,136 @@ button:hover {
 }
 
 #toggleTheme {
-	position: fixed;
-	bottom: 5%;
-	right: 3%;
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
   z-index: 10;
-	font-size: 1rem;
-	border-radius: 50px;
+  font-size: 1rem;
+  border-radius: 50px;
   padding: 1rem;
 
-  /* opacity: 0;
-  animation: slideUp 0.5s forwards ease-out 2s; */
+  opacity: 0;
+  animation: slideUp 1.5s forwards ease 1s;
 }
+
 .hero {
-	flex-direction: column;
+  flex-direction: column;
   padding: 50px 20px;
   font-size: 1.1rem;
 }
+
 .hero-wrapper {
   flex-direction: column-reverse;
 }
+
 .hero-child {
-  flex-direction: column; 
+  flex-direction: column;
   /* margin: 1.5rem 2rem; */
   gap: 10px;
+
+  opacity: 0;
+  animation: slideUp 1.3s forwards ease 0.3s;
 }
+
 .hero-wrapper img {
-	width: 50%;
+  width: 50%;
   margin-bottom: 2rem;
+
+  opacity: 0;
+  animation: slideUp 1.3s forwards ease;
 }
+
 .hero-buttons {
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 }
+
 button {
   font-size: inherit;
 }
+
 .hero-image {
   height: auto;
   aspect-ratio: 3/4;
 }
 
-.parent-section {
+.hero-wrapper .card {
+  padding: 0.5rem;
+  margin: 1rem 0.2rem;
+}
+
+.offer-section {
   flex-direction: column;
   padding: 50px 20px;
 }
-.parent-section h1 {
+
+/* reset mo styles in h1 sa sections */
+.offer-section h1.card,
+.project-section h1.card {
   margin-bottom: 1rem;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
 }
-.parent-section .card {
+
+.offer-section .card {
   flex-direction: column;
 }
+
 .card-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+
+/* ayusin mo rin mamaya */
+.project-section {
+  flex-direction: column;
+  gap: 2rem;
+  padding: 50px;
+}
+
+.card {
+  /* opacity: 1; */
+  opacity: 0;
+}
+
+.animate {
+  animation: slideUp 1.3s forwards ease 0.3s;
+}
+
 .footer {
   flex-direction: column;
   gap: 1rem;
-  align-items: start;
   padding: 50px 20px;
   background-color: var(--border-color);
   color: var(--text-color);
 }
-.footer button {
-  font-size: 1.175rem;
+
+/* .footer-container {
+  display: flex;
+  gap: 10px;
+} */
+
+.footer ul {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.footer ul :hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.footer-bottom {
+  margin-top: 1rem;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
-
 
 /* ::-webkit-scrollbar {
   width: 5px;
@@ -212,76 +278,174 @@ button {
 
 
 
-/* @keyframes slideUp {
+@keyframes slideUp {
   from {
-    transform: translateY(100%);
-    opacity: 0.5;
-  } to {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
     transform: translateY(0);
     opacity: 1;
   }
-} */
+}
+
+@media (min-width: 320px) {
+
+  .navbar-logo,
+  .nav-menu a,
+  .navbar-buttons {
+    font-size: 1.1rem;
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 768px) {
+
+  .navbar-logo,
+  .nav-menu a,
+  .navbar-buttons {
+    font-size: 1.4rem;
+  }
+
   .hero {
     padding: 50px;
-    font-size: 1.3rem; 
+    font-size: 1.3rem;
   }
+
   .hero-wrapper {
     flex-direction: row;
     gap: 2rem;
   }
-  .hero-child {
-    
-  }
+
+  .hero-child {}
+
   .hero-wrapper img {
     width: 40%;
   }
+
   .hero-buttons {
     flex-direction: row;
     margin-top: 1rem;
   }
-  .parent-section {
+
+  .offer-section {
     font-size: 1.2rem;
     padding: 50px;
   }
+
   .card-container {
     display: flex;
   }
+
   .footer {
     flex-direction: row;
     justify-content: space-around;
   }
 }
+
 @media (min-width: 1024px) {
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-menu a,
+  .navbar-buttons {
+    font-size: 1.4rem;
+  }
+
   .hero {
     font-size: 1.4rem;
   }
+
   .hero-wrapper {
     justify-content: space-around;
   }
+
   .hero-child {
     width: 50%;
   }
+
+  .hero-child> :nth-child(2) {
+    font-size: 0;
+  }
+
+  .hero-child> :nth-child(2)::after {
+    content: 'Student Web Developer & UI/UX Designer';
+    font-size: 3rem;
+  }
+
+  /* p tag mo */
+  .hero-child :nth-child(3):after {
+    content: 'As an aspiring designer and developer, I am constantly learning and improving with every project I create.';
+  }
+
   .hero-wrapper img {
     width: 30%;
   }
-  .parent-section {
+
+  .offer-section {
     padding: 60px;
   }
+
   .card-container {
     flex-direction: row;
     gap: 1rem;
   }
+
   .footer {
-    flex-direction: row;
-    justify-content: space-around;
+    /* flex-direction: column; */
+    padding: 2rem 5rem;
+  }
+
+  .footer-container {
+    font-size: 1.1rem;
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+  }
+
+  .footer-column {
+    padding: 0 1rem;
+    width: 30%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+
+  .footer hr {
+    height: 200px;
+  }
+
+  .footer-icons svg {
+    height: 45px;
+    width: 45px;
+  }
+
+  .footer-bottom {
+    text-align: center;
   }
 }
+
 @media (min-width: 1440px) {
+
+  .hero-wrapper {}
+
   .nav-menu a {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
-  .parent-section {
+
+  .hero-child> :nth-child(2)::after {
+    font-size: 3.2rem;
+  }
+
+  .offer-section {
     padding: 120px 180px;
   }
 }
