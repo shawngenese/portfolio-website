@@ -48,7 +48,8 @@ body.dark-mode {
   --card-bg: #111827;
   --border-color: #1f2937;
 
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  /* --shadow: 0 10px 30px rgba(0, 0, 0, 0.5); */
+  --shadow: 0 10px 30px rgba(79, 70, 229, 0.2);
 }
 
 * {
@@ -67,6 +68,7 @@ a {
 
 img {
   display: block;
+  box-shadow: var(--shadow);
 }
 
 ul {
@@ -361,6 +363,7 @@ button {
 
   .hero {
     font-size: 1rem;
+    padding: 20px;
   }
 }
 
@@ -408,6 +411,7 @@ button {
   }
 
   .footer {
+    margin-top: 2rem;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -435,17 +439,17 @@ button {
     width: 50%;
   }
 
-  .hero-child> :nth-child(2) {
+  .hero-child .hero-heading-text {
     font-size: 0;
   }
 
-  .hero-child> :nth-child(2)::after {
+  .hero-child .hero-heading-text::after {
     content: 'Student Web Developer & UI/UX Designer';
     font-size: 3rem;
   }
 
   /* p tag mo */
-  .hero-child :nth-child(3):after {
+  .hero-child .hero-text::after {
     content: 'As an aspiring designer and developer, I am constantly learning and improving with every project I create.';
   }
 
@@ -525,7 +529,7 @@ button {
     font-size: 1.4rem;
   }
 
-  .hero-child> :nth-child(2)::after {
+  .hero-child  .hero-heading-text::after {
     font-size: 3.2rem;
   }
 
