@@ -23,20 +23,24 @@ span {
   flex-direction: column;
   padding: 3.5rem 10px;
 }
+
 .education-container {
   flex-direction: column;
   margin: 1.5rem;
   gap: 1rem;
   border-left: 2px solid var(--text-color);
 }
+
 .education-card {
   position: relative;
   padding: 1.5rem;
 }
-.education-card  span {
+
+.education-card span {
   /* color: var(--primary-color); */
   font-weight: 600;
 }
+
 /* .education-card p {
   color: var(--text-muted);
 } */
@@ -45,9 +49,11 @@ span {
   font-weight: 500;
   font-size: 1.1rem;
 }
+
 .education-desc {
   color: var(--text-muted);
 }
+
 .education-card span::before {
   position: absolute;
   content: '';
@@ -61,7 +67,8 @@ span {
   left: -10px;
   border: 4px solid var(--primary-color);
 }
-.education-container > :nth-child(1) span::before {
+
+.education-container> :nth-child(1) span::before {
   background-color: yellow;
 }
 
@@ -77,10 +84,12 @@ span {
   background: var(--primary-gradient);
   /* background: linear-gradient(135deg, var(--primary-color), var(--primary-hover)); */
 }
+
 .quote-section.card {
   animation: none;
   opacity: 1;
 }
+
 .quote-container.card {
   display: flex;
   flex-direction: column;
@@ -92,40 +101,13 @@ span {
   opacity: 1;
 }
 
-.competencies-section,
 .approach-section {
   padding: 3rem 10px;
 }
 
-.competencies-container,
 .approach-section {
   flex-direction: column;
   width: 100%;
-}
-
-.competencies-container .card {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.competency-tag {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.competencies-content {
-  list-style: '- ';
-  font-weight: 450;
-  font-size: 1rem;
-  padding: 0 10px;
-}
-
-.competencies-section,
-.approach-section {
-  flex-direction: column;
-  padding: 10px;
-  gap: 1.5rem;
 }
 
 .approach-container {
@@ -134,7 +116,6 @@ span {
 
 @media (min-width: 320px) {
 
-  .competencies-section,
   .approach-section {
     flex-direction: column;
     gap: 2rem;
@@ -143,41 +124,26 @@ span {
 }
 
 @media (min-width: 768px) {
-
-  .competencies-container,
+  .approach-section {
+    font-size: 1.1rem;
+  }
   .approach-container {
     flex-direction: row;
     justify-content: center;
-  }
-
-  .competencies-container .card {
-    width: 500px;
-    font-size: 1.1rem;
-  }
-
-  .approach-section {
-    font-size: 1.1rem;
-  }
-
-  .competencies-section,
-  .approach-section {
-    gap: 2rem;
-    padding: 6rem 3rem
   }
 }
 
 @media (min-width: 1024px) {
 
   .quote-container,
-  .competencies-section,
   .approach-section {
     padding: 2rem 10rem;
   }
 
-  .competencies-section,
   .approach-section {
     gap: 2rem;
   }
+
   .education-section h1 {
     font-size: 2.5rem;
   }
@@ -186,19 +152,14 @@ span {
 @media (min-width: 1440px) {
 
   .quote-container,
-  .competencies-section,
   .approach-section {
     padding: 5rem 12rem;
   }
 
-  .approach-container,
-  .competencies-container,
-  .competencies-content,
-  .competency-tag {
+  .approach-container {
     font-size: 1.3rem;
   }
 
-  .competencies-container .card,
   .approach-container .card {
     max-width: 380px;
   }

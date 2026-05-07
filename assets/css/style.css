@@ -329,25 +329,6 @@ button {
   margin-top: 1rem;
 }
 
-
-/* ::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent; 
-}
- 
-::-webkit-scrollbar-thumb {
-  background: #888; 
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-} */
-
-
-
 @keyframes slideUp {
   from {
     transform: translateY(100px);
@@ -392,8 +373,6 @@ button {
     flex-direction: row;
     gap: 2rem;
   }
-
-  .hero-child {}
 
   .hero-wrapper img {
     width: 40%;
@@ -530,8 +509,6 @@ button {
 }
 
 @media (min-width: 1440px) {
-
-  .hero-wrapper {}
 
   .nav-menu a {
     font-size: 1.4rem;
