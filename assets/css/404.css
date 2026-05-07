@@ -1,0 +1,13 @@
+.hero {
+  padding: 10rem 2rem;
+}
+
+.hero-wrapper {
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+.hero-wrapper h1 {
+  font-size: 5em;
+}
