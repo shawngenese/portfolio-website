@@ -27,7 +27,7 @@
       <a href="contact.html">Contact</a>
     </div>
     <div class="nav-buttons flex center">
-      <button class="btnTalk">Let's Talk</button>
+      <a href="contact.html" class="button btnTalk">Let's Talk</a>
       <button id="toggleMenu" class="center button-secondary">&#9776;</button>
     </div>
   </nav>
@@ -80,8 +80,7 @@
           </p>
         </div>
         <div class="card flex">
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"
-            viewBox="0 0 24 24">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
             <path fill="currentColor"
               d="M23 2H1v16h22zm-9.414 10.5l2.5-2.5l-2.5-2.5L15 6.086L18.914 10L15 13.914zM9 13.914L5.086 10L9 6.086L10.414 7.5l-2.5 2.5l2.5 2.5zM21 20H3v2h18z" />
           </svg>
@@ -126,8 +125,6 @@
 
 
   <footer class="footer flex">
-    <!-- <h2 class="">Let's create something great together.</h2>
-    <button class="">Let's talk</button> -->
     <div class="footer-container">
       <div class="footer-column">
         <p class="text-muted" style="margin-bottom: 1rem;">BRAND & VISION</p>
@@ -184,26 +181,7 @@
 
   <script src="assets/js/darkMode.js"></script>
   <script src="assets/js/navbar.js"></script>
-  <script>
-    const img = document.querySelector(".hero-image");
-    img.addEventListener("mouseover", () => img.setAttribute("src", "assets/images/shawn-sleeping.png"));
-    img.addEventListener("mouseout", () => img.setAttribute("src", "assets/images/shawn-picture.png")); 
-  </script>
-  <script>
-    const cards = document.querySelectorAll(".card");
-
-    const cardObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-          cardObserver.unobserve(entry.target); // optional para one-time lang
-        }
-      });
-    }, {
-      threshold: 0.5,
-    });
-    cards.forEach((card) => cardObserver.observe(card));
-  </script>
+  <script src="assets/js/card.js"></script>
 </body>
 
 </html>

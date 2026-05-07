@@ -26,7 +26,7 @@
       <a href="contact.html">Contact</a>
     </div>
     <div class="nav-buttons flex center">
-      <button class="btnTalk">Let's Talk</button>
+      <a href="contact.html" class="button btnTalk">Let's Talk</a>
       <button id="toggleMenu" class="center button-secondary">&#9776;</button>
     </div>
   </nav>
@@ -146,14 +146,16 @@
           <div class="project-content flex">
             <span class="project-tag text-primary">FRONT-END DEVELOPMENT & UI/UX</span>
             <h3>Sonique Music Website</h3>
-            <p class="text-muted">A high-fidelity prototype designed for an artist portfolio featuring a crisp, high-contrast night mode layout.</p>
+            <p class="text-muted">A high-fidelity prototype designed for an artist portfolio featuring a crisp,
+              high-contrast night mode layout.</p>
             <div class="tech-stack text-primary">
               <span>HTML</span>
               <span>CSS</span>
               <span>JS</span>
               <span>Figma</span>
             </div>
-            <a href="https://shawngenese.github.io/sonique-music-website" target="_blank" class="project-link text-primary">View Live Project <span class="arrow">&rarr;</span></a>
+            <a href="https://shawngenese.github.io/sonique-music-website" target="_blank"
+              class="project-link text-primary">View Live Project <span class="arrow">&rarr;</span></a>
           </div>
         </div>
         <div class="card">
@@ -163,23 +165,23 @@
           <div class="project-content flex">
             <span class="project-tag text-primary">FRONT-END DEVELOPMENT</span>
             <h3>Burger King Website</h3>
-            <p class="text-muted">A simple web development project built to practice layout techniques, clean CSS structuring, and functional user-interaction.</p>
+            <p class="text-muted">A simple web development project built to practice layout techniques, clean CSS
+              structuring, and functional user-interaction.</p>
             <div class="tech-stack text-primary">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JS</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JS</span>
             </div>
-            <a href="https://shawngenese.github.io/burgerkingwebsite/" target="_blank" class="project-link text-primary">View Live Project <span class="arrow">&rarr;</span></a>
+            <a href="https://shawngenese.github.io/burgerkingwebsite/" target="_blank"
+              class="project-link text-primary">View Live Project <span class="arrow">&rarr;</span></a>
           </div>
         </div>
       </div>
     </section>
   </main>
-  
+
 
   <footer class="footer flex">
-    <!-- <h2 class="">Let's create something great together.</h2>
-    <button class="">Let's talk</button> -->
     <div class="footer-container">
       <div class="footer-column">
         <p class="text-muted" style="margin-bottom: 1rem;">BRAND & VISION</p>
@@ -236,26 +238,8 @@
 
   <script src="assets/js/darkMode.js"></script>
   <script src="assets/js/navbar.js"></script>
-  <script>
-    const img = document.querySelector(".hero-image");
-    img.addEventListener("mouseover", () => img.setAttribute("src", "assets/images/shawn-sleeping.png"));
-    img.addEventListener("mouseout", () => img.setAttribute("src", "assets/images/shawn-picture.png")); 
-  </script>
-  <script>
-    const cards = document.querySelectorAll(".card");
-
-    const cardObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-          cardObserver.unobserve(entry.target); // optional para one-time lang
-        }
-      });
-    }, {
-      threshold: 0.5,
-    });
-    cards.forEach((card) => cardObserver.observe(card));
-  </script>
+  <script src="assets/js/card.js"></script>
+  <script src="assets/js/imgHover.js"></script>
 </body>
 
 </html>

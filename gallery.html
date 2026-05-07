@@ -27,7 +27,7 @@
       <a href="contact.html">Contact</a>
     </div>
     <div class="nav-buttons flex center">
-      <button class="btnTalk">Let's Talk</button>
+      <a href="contact.html" class="button btnTalk">Let's Talk</a>
       <button id="toggleMenu" class="center button-secondary">&#9776;</button>
     </div>
   </nav>
@@ -44,13 +44,11 @@
   </header>
 
   <main>
-    
+
   </main>
-  
+
 
   <footer class="footer flex">
-    <!-- <h2 class="">Let's create something great together.</h2>
-    <button class="">Let's talk</button> -->
     <div class="footer-container">
       <div class="footer-column">
         <p class="text-muted" style="margin-bottom: 1rem;">BRAND & VISION</p>
@@ -107,26 +105,7 @@
 
   <script src="assets/js/darkMode.js"></script>
   <script src="assets/js/navbar.js"></script>
-  <script>
-    const img = document.querySelector(".hero-image");
-    img.addEventListener("mouseover", () => img.setAttribute("src", "assets/images/shawn-sleeping.png"));
-    img.addEventListener("mouseout", () => img.setAttribute("src", "assets/images/shawn-picture.png")); 
-  </script>
-  <script>
-    const cards = document.querySelectorAll(".card");
-
-    const cardObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-          cardObserver.unobserve(entry.target); // optional para one-time lang
-        }
-      });
-    }, {
-      threshold: 0.5,
-    });
-    cards.forEach((card) => cardObserver.observe(card));
-  </script>
+  <script src="assets/js/card.js"></script>
 </body>
 
 </html>
