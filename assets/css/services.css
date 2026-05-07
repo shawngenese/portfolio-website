@@ -1,0 +1,15 @@
+.hero {
+
+}
+.hero-container {
+  flex-direction: column;
+  gap: 2rem;
+}
+.card-container {
+  flex-wrap: wrap;
+}
+.card-container .card{
+  flex-direction: column;
+  width: 400px;
+  height: 400px;
+}

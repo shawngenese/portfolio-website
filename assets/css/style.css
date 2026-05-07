@@ -79,6 +79,14 @@ ul {
   display: none;
 }
 
+#featuredProjects {
+  scroll-margin-top: 70px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
@@ -88,7 +96,7 @@ body {
     color 0.3s ease;
 }
 
-button {
+button, .button {
   padding: 10px 16px;
   border: none;
   cursor: pointer;
@@ -98,10 +106,10 @@ button {
 
   border-radius: 6px;
   box-shadow: var(--shadow);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-button:hover {
+button:hover, .button:hover {
   background: var(--primary-hover);
   transform: translateY(-1px);
 }
@@ -201,8 +209,8 @@ button {
 }
 
 /* reset mo styles in h1 sa sections */
-.offer-section h1.card,
-.project-section h1.card {
+.offer-section h1,
+.project-section h1 {
   margin-bottom: 1rem;
   border: none;
   box-shadow: none;
@@ -535,5 +543,9 @@ button {
 
   .offer-section {
     padding: 120px 180px;
+  }
+
+  section h1 {
+    font-size: 2.5rem;
   }
 }
