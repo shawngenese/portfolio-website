@@ -83,8 +83,11 @@
 }
 
 @media (min-width: 1440px) {
+  header h1 {
+    font-size: 1.8em;
+  }
   .hero {
-    padding: 2rem;
+    padding: 5rem;
   }
 
   .image-container .card {

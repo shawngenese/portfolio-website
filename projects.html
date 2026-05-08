@@ -7,7 +7,7 @@
   <title>Portfolio Website - ShawnGenese</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/reusableClassName.css">
-  <link rel="stylesheet" href="assets/css/achievements.css">
+  <link rel="stylesheet" href="assets/css/projects.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
@@ -38,40 +38,68 @@
     </svg>
   </button>
 
-  <header class="experience-section flex center">
-    <h1 style="text-align: center;">Project Experience</h1>
-    <p style="text-align: center;">Showcasing my technical leadership and growth through academic web development
-      projects.</p>
-    <div class="education-container flex">
-      <div class="education-card card">
-        <span>Ongoing</span>
-        <h2 class="text-gradient">Technical Growth</h2>
-        <p class="education-school">Skills Mastery & Application</p>
-        <p class="education-desc">Dedicated to enhancing my skills in front-end development. I apply core programming
-          principles to school projects to bridge the gap between academic theory and real-world web solutions.</p>
+  <section class="project-section center" id="featuredProjects">
+    <h1 class="">Recent Projects</h1>
+    <div class="project-container flex">
+      <div class="card">
+        <div class="project-image">
+          <img src="assets/images/sonique-website.png" alt="" height="100%" width="100%">
+        </div>
+        <div class="project-content flex">
+          <span class="project-tag text-primary">FRONT-END DEVELOPMENT & UI/UX</span>
+          <h3>Sonique Music Website</h3>
+          <p class="text-muted">A high-fidelity prototype designed for an artist portfolio featuring a crisp,
+            high-contrast night mode layout.</p>
+          <div class="tech-stack text-primary">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+            <span>Figma</span>
+          </div>
+          <a href="https://shawngenese.github.io/sonique-music-website" target="_blank"
+            class="project-link text-primary">View Live Project <span class="arrow">&rarr;</span></a>
+        </div>
       </div>
-      <div class="education-card card">
-        <span>2026 - Present</span>
-        <h2 class="text-gradient">Web Developer</h2>
-        <p class="education-school">Portfolio & Interactive Projects</p>
-        <p class="education-desc">Building responsive and minimalist websites. I focus on translating complex UI/UX
-          designs into functional code using HTML, CSS, and JavaScript, while constantly refining my technical workflow.
-        </p>
+      <div class="card">
+        <div class="project-image">
+          <img src="assets/images/burger-king-website.png" alt="" height="100%" width="100%">
+        </div>
+        <div class="project-content flex">
+          <span class="project-tag text-primary">FRONT-END DEVELOPMENT</span>
+          <h3>Burger King Website</h3>
+          <p class="text-muted">A simple web development project built to practice layout techniques, clean CSS
+            structuring, and functional user-interaction.</p>
+          <div class="tech-stack text-primary">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+          </div>
+          <a href="https://shawngenese.github.io/burgerkingwebsite/" target="_blank"
+            class="project-link text-primary">View Live Project <span class="arrow">&rarr;</span></a>
+        </div>
       </div>
-      <div class="education-card card">
-        <span>2026 - Present</span>
-        <h2 class="text-gradient">Programming Team Lead</h2>
-        <p class="education-school">Academic Group Projects</p>
-        <p class="education-desc">Acted as the lead programmer for group assignments. I managed the code structure,
-          delegated tasks to teammates, and ensured all technical features were integrated seamlessly.</p>
+      <div class="card">
+        <div class="project-image">
+          <img src="assets/images/pos-system.png" alt="" height="235px" width="100%" style="object-fit: cover;">
+        </div>
+        <div class="project-content flex">
+          <span class="project-tag text-primary">WINFORMS</span>
+          <h3>POS System</h3>
+          <p class="text-muted">A simple winforms project built to practice connection with databases, clean code
+            structuring, integrate API's and functional user-interfaces.</p>
+          <div class="tech-stack text-primary">
+            <span>C#</span>
+            <span>Winforms</span>
+            <span>.NET</span>
+          </div>
+          <a href="https://shawngenese.github.io/burgerkingwebsite/" target="_blank"
+            class="project-link text-primary">View Live Project <span class="arrow">&rarr;</span></a>
+        </div>
       </div>
     </div>
-    <div class="flex center" style="margin-top: 40px; flex-direction: column;">
-      <p class="text-muted" style="margin-bottom: 10px;">Note: Currently a student with no formal work experience. All
-        work listed is school-based project experience.</p>
-      <a onclick="window.history.back()" class="button">Back to Page</a>
-    </div>
-  </header>
+    <a class="button" style="margin-top: 2rem;" onclick="window.history.back()">Back to Page</a>
+  </section>
+
 
   <footer class="footer flex">
     <div class="footer-container">
@@ -132,6 +160,7 @@
   <script src="assets/js/darkMode.js"></script>
   <script src="assets/js/navbar.js"></script>
   <script src="assets/js/card.js"></script>
+  <script src="assets/js/imgHover.js"></script>
 </body>
 
 </html>

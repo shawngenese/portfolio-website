@@ -1,0 +1,21 @@
+@media (min-width: 1024px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .project-container .card {
+    width: 400px;
+    height: max-content;
+  }
+}
+@media (min-width: 1440px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .project-container .card {
+    width: 430px;
+    font-size: 1rem;
+    height: 480px;
+  }
+}
