@@ -94,7 +94,15 @@ body {
   transition:
     background 0.3s ease,
     color 0.3s ease;
-}
+
+  /* galing kay google (ayaw ko na seselect siya sir) */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+  }
 
 button, .button {
   padding: 10px 16px;
