@@ -1,2 +1,2 @@
 # portfolio-website
-still learning
+still learning (input ka sa contact sir HAHAHAH)
